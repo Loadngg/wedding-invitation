@@ -1,26 +1,55 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+	--green-900: #666957;
+	--green-600: #858e7d;
+	--pink-900: #b08a80;
+	--pink-600: #eebfbb;
+	--pink-300: #ffe6e4;
+	--primary: #111111;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+	--color-green-900: var(--green-900);
+	--color-green-600: var(--green-600);
+	--color-pink-900: var(--pink-900);
+	--color-pink-600: var(--pink-600);
+	--color-pink-300: var(--pink-300);
+	--color-primary: var(--primary);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+	background: url('/background.jpg') center no-repeat;
+	color: var(--primary);
+	font-family: var(--font-comfortaa), sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: var(--font-gogol), sans-serif;
+}
+
+th {
+	@apply pb-2;
+}
+
+td {
+	@apply py-3 px-6;
+}
+
+.timer-block {
+	@apply flex flex-col items-center justify-center min-w-[100px];
+}
+
+.number {
+	@apply text-8xl -mb-7;
+	font-family: var(--font-gogol), sans-serif;
+}
+
+.colored-circle {
+	@apply w-14 h-14 rounded-full border border-green-900;
 }
