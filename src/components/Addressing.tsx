@@ -1,5 +1,5 @@
-import { Container } from '../ui/container/Container'
-import { Title } from '../ui/title/Title'
+import { Container } from './ui/container/Container'
+import { Title } from './ui/title/Title'
 
 export function Addressing() {
 	return (

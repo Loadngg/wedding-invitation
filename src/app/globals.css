@@ -41,6 +41,14 @@ td {
 	@apply py-3 px-6;
 }
 
+.button {
+	@apply rounded-lg py-2 px-12 bg-green-900 text-white text-lg cursor-pointer shadow transition-colors hover:bg-green-600;
+}
+
+.button.button--warning {
+	@apply bg-pink-600 text-primary hover:bg-pink-300;
+}
+
 .timer-block {
 	@apply flex flex-col items-center justify-center min-w-[100px];
 }
@@ -52,4 +60,12 @@ td {
 
 .colored-circle {
 	@apply w-14 h-14 rounded-full border border-green-900;
+}
+
+.question-block {
+	@apply flex flex-col text-left;
+}
+
+.question-title {
+	@apply font-bold text-lg mb-2;
 }

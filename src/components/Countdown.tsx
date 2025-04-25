@@ -1,7 +1,7 @@
 'use client'
 
+import { ICountdownTimer } from '@/types/countdown.data'
 import { useEffect, useState } from 'react'
-import { ICountdownTimer } from './countdown.data'
 
 const calculateTimeLeft = (targetDate: number): ICountdownTimer => {
 	const MS_IN_SECOND = 1000

@@ -1,5 +1,5 @@
-import { Container } from '../ui/container/Container'
-import { Countdown } from './countdown/Countdown'
+import { Container } from './ui/container/Container'
+import { Countdown } from './Countdown'
 
 export function Footer() {
 	return (

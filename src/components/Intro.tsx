@@ -6,8 +6,9 @@ export function Intro() {
 			<Image
 				src='/intro.jpg'
 				alt='intro'
-				fill={true}
-				className='object-cover -z-10 brightness-70'
+				fill
+				priority
+				className='object-cover -z-10 brightness-70 w-auto h-auto'
 			/>
 			<div className='h-full flex flex-col items-center justify-center gap-32 text-center text-pink-300'>
 				<h1 className='text-9xl leading-[0.8]'>
