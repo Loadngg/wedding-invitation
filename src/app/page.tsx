@@ -5,6 +5,7 @@ import { Footer } from '@/components/Footer'
 import { GuestQuest } from '@/components/guest-quest/GuestQuest'
 import { Help } from '@/components/Help'
 import { Intro } from '@/components/Intro'
+import { Schedule } from '@/components/schedule/Schedule'
 import { Location } from '../components/location/Location'
 
 export default function Home() {
@@ -13,6 +14,7 @@ export default function Home() {
 			<Intro />
 			<Addressing />
 			<Calendar />
+			<Schedule />
 			<Location />
 			<DressCode />
 			<GuestQuest />

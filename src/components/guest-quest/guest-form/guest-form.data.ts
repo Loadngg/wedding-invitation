@@ -10,3 +10,9 @@ export enum Presence {
 	YES = 'Да',
 	NO = 'Нет',
 }
+
+export enum GuestErrors {
+	Name = 'Введите имя',
+	Alcohol = 'Выберите алкоголь',
+	Sending = 'Произошла ошибка при отправке анкет',
+}

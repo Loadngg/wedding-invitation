@@ -3,6 +3,7 @@ import type { Metadata } from 'next'
 import { Comfortaa } from 'next/font/google'
 import localFont from 'next/font/local'
 import './globals.css'
+import { Providers } from './providers'
 
 const comfortaa = Comfortaa({
 	variable: '--font-comfortaa',
@@ -30,7 +31,9 @@ export default function RootLayout({
 	return (
 		<html lang='ru'>
 			<body className={`${comfortaa.variable} ${gogol.variable} antialiased`}>
-				<MainWrapper>{children}</MainWrapper>
+				<Providers>
+					<MainWrapper>{children}</MainWrapper>
+				</Providers>
 			</body>
 		</html>
 	)

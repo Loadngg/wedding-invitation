@@ -14,14 +14,14 @@ export function Help() {
 				<div className='flex items-center justify-center gap-4'>
 					<Image
 						alt='telegram'
-						src='/telegram.svg'
+						src='/icons/telegram.svg'
 						width={35}
 						height={35}
 						loading='lazy'
 					/>
 					<Image
 						alt='whatsapp'
-						src='/whatsapp.svg'
+						src='/icons/whatsapp.svg'
 						width={35}
 						height={35}
 						loading='lazy'

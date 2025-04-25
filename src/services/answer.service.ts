@@ -6,7 +6,7 @@ class AnswerService {
 	private BASE_URL
 
 	constructor() {
-    const apiUrl = process.env.NEXT_PUBLIC_API_URL
+		const apiUrl = process.env.NEXT_PUBLIC_API_URL
 		if (!apiUrl) {
 			throw new Error('NEXT_PUBLIC_API_URL is not defined')
 		}
@@ -14,7 +14,7 @@ class AnswerService {
 		this.BASE_URL = apiUrl
 	}
 
-	async createAnswer(data: IAnswer) {
+	async createAnswer(data: IAnswer[]) {
 		const response = await axios.post(this.BASE_URL, data)
 		return response.data
 	}
