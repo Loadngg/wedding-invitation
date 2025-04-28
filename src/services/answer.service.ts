@@ -3,7 +3,7 @@ import { IAnswer } from '@/types/answer.type'
 import axios from 'axios'
 
 class AnswerService {
-	private BASE_URL
+	private BASE_URL: string
 
 	constructor() {
 		const apiUrl = process.env.NEXT_PUBLIC_API_URL

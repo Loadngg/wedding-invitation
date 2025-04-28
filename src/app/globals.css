@@ -19,7 +19,6 @@
 }
 
 body {
-	background: url('/background.jpg') center no-repeat;
 	color: var(--primary);
 	font-family: var(--font-comfortaa), sans-serif;
 }
