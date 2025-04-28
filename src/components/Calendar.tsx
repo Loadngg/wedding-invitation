@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import { Container } from './ui/container/Container'
 import { Title } from './ui/title/Title'
 
@@ -16,31 +17,49 @@ export function Calendar() {
 		<Container>
 			<div className='flex flex-col items-center gap-6 w-fit p-8 -m-8 mx-auto'>
 				<Title>Июль</Title>
-				<table>
-					<thead>
-						<tr className='uppercase text-xl'>
-							{days.map(day => (
-								<th key={day}>{day}</th>
-							))}
-						</tr>
-					</thead>
-					<tbody className='text-primary/70'>
-						{calendarData.map((row, rowIndex) => (
-							<tr key={rowIndex}>
-								{row.map((cell, cellIndex) => (
-									<td
-										key={cellIndex}
-										className={
-											cell === 19 ? 'text-3xl text-primary font-bold' : ''
-										}
-									>
-										{cell}
-									</td>
+				<div className='relative'>
+					<Image
+						src='/angel.png'
+						alt='Купидон'
+						width={450}
+						height={350}
+						loading='lazy'
+						className='absolute -top-4 -left-32 opacity-80 -rotate-2 w-auto h-auto'
+					/>
+					<table>
+						<thead>
+							<tr className='uppercase text-xl'>
+								{days.map(day => (
+									<th key={day}>{day}</th>
 								))}
 							</tr>
-						))}
-					</tbody>
-				</table>
+						</thead>
+						<tbody className='text-primary/70'>
+							{calendarData.map((row, rowIndex) => (
+								<tr key={rowIndex}>
+									{row.map((cell, cellIndex) =>
+										cell === 19 ? (
+											<td
+												key={cellIndex}
+												className={'relative text-3xl text-primary font-bold'}
+											>
+												{cell}
+												<Image
+													src='/heart.svg'
+													alt='Сердце'
+													fill
+													className='absolute top-0 left-0'
+												/>
+											</td>
+										) : (
+											<td key={cellIndex}>{cell}</td>
+										)
+									)}
+								</tr>
+							))}
+						</tbody>
+					</table>
+				</div>
 			</div>
 		</Container>
 	)

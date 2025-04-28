@@ -3,6 +3,7 @@
 import { answerService } from '@/services/answer.service'
 import { IAnswer, IAnswerFormData } from '@/types/answer.type'
 import { useMutation } from '@tanstack/react-query'
+import Image from 'next/image'
 import { useEffect, useRef, useState } from 'react'
 import { twMerge } from 'tailwind-merge'
 import { Container } from '../ui/container/Container'
@@ -125,8 +126,16 @@ export function GuestQuest() {
 
 	return (
 		<Container>
-			<div className='flex flex-col items-center gap-6'>
+			<div className='flex flex-col items-center gap-6 relative'>
 				<Title>Анкета гостя</Title>
+				<Image
+					src='/envelope.png'
+					alt='Конверт'
+					width={200}
+					height={450}
+					loading='lazy'
+					className='absolute top-52 left-64 w-auto h-auto'
+				/>
 				<div className='flex flex-col gap-6'>
 					{formsData.map(form => (
 						<GuestForm
@@ -136,6 +145,7 @@ export function GuestQuest() {
 							presence={form.presence}
 							alcohol={form.alcohol}
 							errors={form.errors}
+							isSubmitted={isSubmitted}
 							onNameChange={updateName}
 							onPresenceChange={updatePresence}
 							onAlcoholChange={updateAlcohol}
@@ -143,7 +153,13 @@ export function GuestQuest() {
 						/>
 					))}
 				</div>
-				<button onClick={addForm} className='button'>
+				<button
+					onClick={addForm}
+					className={twMerge(
+						'button',
+						isSubmitted ? 'opacity-50 pointer-events-none' : ''
+					)}
+				>
 					Добавить гостя
 				</button>
 				<button
@@ -153,7 +169,11 @@ export function GuestQuest() {
 						(isSubmitted || isLoading) && 'opacity-50 pointer-events-none'
 					)}
 				>
-					{isLoading ? 'Отправка...' : 'Отправить анкеты'}
+					{isSubmitted
+						? 'Отправлено'
+						: isLoading
+						? 'Отправка...'
+						: 'Отправить анкеты'}
 				</button>
 			</div>
 		</Container>

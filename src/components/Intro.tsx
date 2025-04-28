@@ -4,7 +4,7 @@ export function Intro() {
 	return (
 		<div className='h-[85vh] relative'>
 			<Image
-				src='/intro.jpg'
+				src='/intro.webp'
 				alt='intro'
 				fill
 				priority

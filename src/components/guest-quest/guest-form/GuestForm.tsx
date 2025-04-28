@@ -9,6 +9,7 @@ interface Props {
 	presence: string
 	alcohol: string[]
 	errors: string[]
+	isSubmitted: boolean
 	closeForm: (id: number) => void
 	onNameChange: (id: number, name: string) => void
 	onPresenceChange: (id: number, presence: string) => void
@@ -21,6 +22,7 @@ export function GuestForm({
 	presence,
 	alcohol,
 	errors,
+	isSubmitted,
 	closeForm,
 	onNameChange,
 	onPresenceChange,
@@ -55,7 +57,7 @@ export function GuestForm({
 							type='radio'
 							checked={presence === option}
 							onChange={() => onPresenceChange(id, option)}
-							className='h-4 w-4'
+							className='h-4 w-4 cursor-pointer'
 						/>
 						{option}
 					</label>
@@ -71,7 +73,7 @@ export function GuestForm({
 								type='checkbox'
 								checked={alcohol.includes(type)}
 								onChange={() => handleAlcohol(type)}
-								className='h-4 w-4 rounded border-gray-300'
+								className='h-4 w-4 rounded border-gray-300 cursor-pointer'
 							/>
 							{type}
 						</label>
@@ -96,7 +98,10 @@ export function GuestForm({
 				<button
 					type='button'
 					onClick={() => closeForm(id)}
-					className='button button--warning'
+					className={twMerge(
+						'button button--warning',
+						isSubmitted ? 'opacity-50 pointer-events-none' : ''
+					)}
 				>
 					Удалить
 				</button>

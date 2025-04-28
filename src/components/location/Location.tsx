@@ -14,14 +14,21 @@ export function Location() {
 			<div className='flex flex-col items-center gap-6'>
 				<Title>Локация</Title>
 				<Image
-					src='/location.jpg'
+					src='/location-bg.jpg'
 					alt='Авиатор'
 					width={400}
 					height={300}
 					className='object-cover brightness-80 w-auto h-auto'
 				/>
 				<div className='flex flex-col items-center justify-center gap-2'>
-					<p>Авиатор</p>
+					<a
+						href='https://yandex.ru/maps/org/aviator/201355573132'
+						target='_blank'
+						rel='noopener noreferrer'
+						className='underline transition-opacity hover:opacity-40'
+					>
+						Авиатор
+					</a>
 					<p>
 						База отдыха расположена
 						<br />в сосновом лесу на берегу р.Цна
