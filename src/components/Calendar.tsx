@@ -15,7 +15,7 @@ const calendarData = [
 export function Calendar() {
 	return (
 		<Container>
-			<div className='flex flex-col items-center gap-6 w-fit p-8 -m-8 mx-auto'>
+			<div className='flex flex-col items-center gap-6 w-fit p-8 -mt-8 mx-auto'>
 				<Title>Июль</Title>
 				<div className='relative'>
 					<Image
@@ -24,11 +24,11 @@ export function Calendar() {
 						width={450}
 						height={350}
 						loading='lazy'
-						className='absolute -top-4 -left-32 opacity-80 -rotate-2 w-auto h-auto'
+						className='opacity-80 -rotate-2 w-auto h-auto absolute top-8 -left-12 lg:-top-4 lg:-left-32'
 					/>
 					<table>
 						<thead>
-							<tr className='uppercase text-xl'>
+							<tr className='uppercase text-lg lg:text-xl'>
 								{days.map(day => (
 									<th key={day}>{day}</th>
 								))}
@@ -41,7 +41,9 @@ export function Calendar() {
 										cell === 19 ? (
 											<td
 												key={cellIndex}
-												className={'relative text-3xl text-primary font-bold'}
+												className={
+													'relative text-xl md:text-3xl text-primary font-bold'
+												}
 											>
 												{cell}
 												<Image

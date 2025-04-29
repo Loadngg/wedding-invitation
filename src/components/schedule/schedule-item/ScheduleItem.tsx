@@ -9,24 +9,32 @@ interface Props {
 
 export function ScheduleItem({ data, hideLine }: Props) {
 	return (
-		<div className='flex items-start justify-start gap-12 w-full relative'>
-			<div className='flex flex-col items-center justify-center rounded-full bg-green-600 w-[60px] h-[60px]'>
-				<Image
-					src={data.iconUrl}
-					alt={data.title}
-					width={35}
-					height={35}
-					loading='lazy'
-				/>
+		<div className='flex items-start justify-start gap-4 md:gap-8 lg:gap-12 w-full relative'>
+			<div className='flex flex-col items-center justify-center rounded-full bg-green-600 w-[45px] h-[45px] md:w-[50px] md:h-[50px] lg:w-[60px] lg:h-[60px]'>
+				<div className='relative flex flex-col items-center justify-center w-[20px] h-[20px] md:w-[25px] md:h-[25px] lg:w-[35px] lg:h-[35px]'>
+					<Image
+						src={data.iconUrl}
+						alt={data.title}
+						fill
+						loading='lazy'
+						className='w-auto h-auto'
+					/>
+				</div>
 			</div>
 			<div className='flex flex-col items-start justify-center text-left'>
-				<p className='text-3xl text-green-900'>{data.time}</p>
-				<p className='text-2xl text-green-600'>{data.title}</p>
-				<p className='text-xl whitespace-pre-wrap'>{data.description}</p>
+				<p className='text-primary text-xl md:text-2xl lg:text-3xl'>
+					{data.time}
+				</p>
+				<p className='text-green-900 text-lg md:text-xl lg:text-2xl'>
+					{data.title}
+				</p>
+				<p className='whitespace-pre-wrap text-md md:text-lg lg:text-xl'>
+					{data.description}
+				</p>
 			</div>
 			<div
 				className={twMerge(
-					'bg-green-600 w-[4px] -z-1 h-full absolute top-[60px] left-[28px]',
+					'bg-green-600 -z-1 h-full absolute w-[2px] top-[45px] left-[22px] md:top-[50px] md:left-[24px] lg:top-[60px] lg:left-[28px] lg:w-[4px]',
 					hideLine && 'hidden'
 				)}
 			></div>

@@ -134,7 +134,7 @@ export function GuestQuest() {
 					width={200}
 					height={450}
 					loading='lazy'
-					className='absolute top-52 left-64 w-auto h-auto'
+					className='absolute top-52 left-64 w-auto h-auto hidden md:block'
 				/>
 				<div className='flex flex-col gap-6'>
 					{formsData.map(form => (

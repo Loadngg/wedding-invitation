@@ -9,10 +9,10 @@ export function Schedule() {
 		<Container>
 			<div className='flex flex-col items-center gap-6'>
 				<Title>Программа дня</Title>
-				<p className='text-3xl text-center text-green-900'>
+				<p className='text-center text-green-900 text-xl md:text-2xl lg:text-3xl'>
 					Суббота 19 июля 2025
 				</p>
-				<div className='flex flex-col items-center justify-center gap-16 relative'>
+				<div className='flex flex-col items-center justify-center relative gap-6 md:gap-8 lg:gap-16'>
 					{scheduleData.map((data, index) => (
 						<ScheduleItem
 							data={data}
@@ -26,7 +26,7 @@ export function Schedule() {
 						width={200}
 						height={450}
 						loading='lazy'
-						className='absolute bottom-8 -right-24 opacity-80 w-auto h-auto'
+						className='absolute opacity-80 w-auto h-auto bottom-8 -right-12 lg:-right-24'
 					/>
 				</div>
 			</div>

@@ -6,13 +6,13 @@ export function DressCode() {
 		<Container>
 			<div className='flex flex-col items-center gap-6'>
 				<Title>Дресс-код</Title>
-				<p className='text-xl max-w-[800px]'>
+				<p className='max-w-[800px] text-md md:text-lg lg:text-xl'>
 					мы просим воздержаться от ярких цветов и броских принтов. Будем очень
 					рады, если вы отдадите предпочтение спокойным и нейтральным тонам.
 					<br />
 					Также будем признательны, если в белом будет только невеста
 				</p>
-				<div className='flex gap-4'>
+				<div className='flex flex-wrap items-center justify-center gap-4'>
 					<div className='colored-circle bg-green-900'></div>
 					<div className='colored-circle bg-green-600'></div>
 					<div className='colored-circle bg-[#a4d1cb]'></div>

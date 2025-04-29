@@ -9,12 +9,12 @@ export function LocationMap({ onClose }: Props) {
 			onClick={onClose}
 		>
 			<div
-				className='bg-white rounded-lg shadow-xl relative w-full max-w-4xl h-[600px]'
+				className='bg-white rounded-lg shadow-xl relative w-full max-w-full lg:max-w-4xl h-[600px]'
 				onClick={e => e.stopPropagation()}
 			>
 				<button
 					onClick={onClose}
-					className='absolute -right-12 -top-12 z-50 w-12 h-12 bg-pink-600 text-primary rounded-full shadow-lg cursor-pointer hover:bg-pink-300 transition-colors'
+					className='absolute z-50 w-12 h-12 bg-pink-600 text-primary rounded-full shadow-lg cursor-pointer hover:bg-pink-300 transition-colors right-4 top-4 lg:-right-12 lg:-top-12'
 				>
 					<span className='text-2xl'>×</span>
 				</button>

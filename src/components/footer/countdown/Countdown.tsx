@@ -48,7 +48,7 @@ export function Countdown() {
 	}
 
 	return (
-		<div className='flex justify-center items-center gap-8'>
+		<div className='flex justify-center items-center gap-8 flex-col md:flex-row'>
 			<div className='timer-block'>
 				<span className='number'>{timeLeft.days}</span>
 				<span>дней</span>

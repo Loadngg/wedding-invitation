@@ -4,14 +4,14 @@ export function Intro() {
 	return (
 		<div className='h-[85vh] relative'>
 			<Image
-				src='/intro.webp'
+				src='/intro.jpg'
 				alt='intro'
 				fill
 				priority
-				className='object-cover -z-10 brightness-70 w-auto h-auto'
+				className='object-cover -z-10 brightness-40 w-auto h-auto'
 			/>
-			<div className='h-full flex flex-col items-center justify-center gap-32 text-center text-pink-300'>
-				<h1 className='text-9xl leading-[0.8]'>
+			<div className='h-full flex flex-col items-center justify-center text-center text-pink-300 gap-40 lg:gap-56'>
+				<h1 className='leading-[0.8] text-7xl md:text-8xl lg:text-9xl'>
 					Ярослав
 					<br />и<br />
 					Ксения

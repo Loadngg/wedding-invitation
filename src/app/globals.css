@@ -33,15 +33,15 @@ h6 {
 }
 
 th {
-	@apply pb-2;
+	@apply pb-1 md:pb-2;
 }
 
 td {
-	@apply py-3 px-6;
+	@apply py-1 px-2 md:py-2 md:px-4 lg:py-3 lg:px-6;
 }
 
 .button {
-	@apply rounded-lg py-2 px-12 bg-green-900 text-white text-lg cursor-pointer shadow transition-colors hover:bg-green-600;
+	@apply rounded-lg py-2 px-6 bg-green-900 text-white cursor-pointer shadow transition-colors hover:bg-green-600 md:px-8 lg:text-lg lg:px-12;
 }
 
 .button.button--warning {
@@ -53,7 +53,7 @@ td {
 }
 
 .number {
-	@apply text-8xl -mb-7;
+	@apply text-6xl -mb-5 md:text-7xl md:-mb-6 lg:text-8xl lg:-mb-7;
 	font-family: var(--font-gogol), sans-serif;
 }
 
