@@ -8,7 +8,7 @@ export function Intro() {
 				alt='intro'
 				fill
 				priority
-				className='object-cover -z-10 brightness-40 w-auto h-auto'
+				className='object-cover -z-10 brightness-50 w-auto h-auto'
 			/>
 			<div className='h-full flex flex-col items-center justify-center text-center text-pink-300 gap-40 lg:gap-56'>
 				<h1 className='leading-[0.8] text-7xl md:text-8xl lg:text-9xl'>

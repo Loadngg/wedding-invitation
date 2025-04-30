@@ -18,14 +18,15 @@ export function Calendar() {
 			<div className='flex flex-col items-center gap-6 w-fit p-8 -mt-8 mx-auto'>
 				<Title>Июль</Title>
 				<div className='relative'>
-					<Image
-						src='/angel.png'
-						alt='Купидон'
-						width={450}
-						height={350}
-						loading='lazy'
-						className='opacity-80 -rotate-2 w-auto h-auto absolute top-8 -left-12 lg:-top-4 lg:-left-32'
-					/>
+					<div className='absolute top-3 -left-16 w-[250px] h-[200px] md:w-[350px] md:h-[300px] md:-top-3 md:-left-24 lg:w-[425px] lg:h-[375px] lg:-top-6 lg:-left-20'>
+						<Image
+							src='/angel.png'
+							alt='Купидон'
+							fill
+							loading='lazy'
+							className='object-contain opacity-80 -rotate-2'
+						/>
+					</div>
 					<table>
 						<thead>
 							<tr className='uppercase text-lg lg:text-xl'>

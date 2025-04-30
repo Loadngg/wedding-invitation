@@ -13,13 +13,14 @@ export function Location() {
 		<Container>
 			<div className='flex flex-col items-center gap-6'>
 				<Title>Локация</Title>
-				<Image
-					src='/location-bg.jpg'
-					alt='Авиатор'
-					width={400}
-					height={300}
-					className='object-cover brightness-80 w-auto h-auto'
-				/>
+				<div className='relative flex items-center justify-center w-full h-[300px] md:h-[400px] lg:h-[500px]'>
+					<Image
+						src='/location-bg.jpg'
+						alt='Авиатор'
+						fill
+						className='object-contain brightness-80'
+					/>
+				</div>
 				<div className='flex flex-col items-center justify-center gap-2'>
 					<a
 						href='https://yandex.ru/maps/org/aviator/201355573132'

@@ -20,14 +20,15 @@ export function Schedule() {
 							hideLine={index === scheduleData.length - 1}
 						/>
 					))}
-					<Image
-						src='/glasses.png'
-						alt='Бокалы'
-						width={200}
-						height={450}
-						loading='lazy'
-						className='absolute opacity-80 w-auto h-auto bottom-8 -right-12 lg:-right-24'
-					/>
+					<div className='absolute bottom-12 -right-28 w-[250px] h-[200px] md:w-[300px] md:h-[250px] md:bottom-14 md:-right-40 lg:w-[350px] lg:h-[300px] lg:-right-48 lg:bottom-12'>
+						<Image
+							src='/glasses.png'
+							alt='Бокалы'
+							fill
+							loading='lazy'
+							className='object-contain opacity-80'
+						/>
+					</div>
 				</div>
 			</div>
 		</Container>

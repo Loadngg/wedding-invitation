@@ -5,7 +5,7 @@ export function MainWrapper({ children }: PropsWithChildren<unknown>) {
 		<div className='relative'>
 			{children}
 			<img
-				className='fixed top-0 left-0 -z-20 w-full h-screen object-cover opacity-70'
+				className='fixed top-0 left-0 -z-20 w-full h-lvh object-cover opacity-70'
 				src='/background.jpg'
 				alt='background'
 			/>

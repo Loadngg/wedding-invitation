@@ -20,14 +20,15 @@ export default function Home() {
 			<DressCode />
 			<GuestQuest />
 			<Help />
-			<Image
-				src='/rings.png'
-				alt='Кольца'
-				width={200}
-				height={450}
-				loading='lazy'
-				className='w-auto h-auto m-auto'
-			/>
+			<div className='relative flex items-center justify-center w-full h-[100px] md:h-[125px] lg:h-[150px]'>
+				<Image
+					src='/rings.png'
+					alt='Кольца'
+					fill
+					loading='lazy'
+					className='object-contain'
+				/>
+			</div>
 			<Footer />
 		</div>
 	)

@@ -128,14 +128,15 @@ export function GuestQuest() {
 		<Container>
 			<div className='flex flex-col items-center gap-6 relative'>
 				<Title>Анкета гостя</Title>
-				<Image
-					src='/envelope.png'
-					alt='Конверт'
-					width={200}
-					height={450}
-					loading='lazy'
-					className='absolute top-52 left-64 w-auto h-auto hidden md:block'
-				/>
+				<div className='absolute top-52 hidden md:block md:left-12 md:w-[100px] md:h-[150px] lg:left-16 lg:w-[200px] lg:h-[250px] xl:left-32 2xl:left-64'>
+					<Image
+						src='/envelope.png'
+						alt='Конверт'
+						fill
+						loading='lazy'
+						className='object-contain'
+					/>
+				</div>
 				<div className='flex flex-col gap-6'>
 					{formsData.map(form => (
 						<GuestForm
