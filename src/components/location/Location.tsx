@@ -30,7 +30,7 @@ export function Location() {
 				</m.div>
 				<m.div
 					className='flex flex-col items-center justify-center gap-2'
-					initial={mAnimations.fadeRight50}
+					initial={mAnimations.opacity}
 					whileInView={mAnimations.inView}
 					transition={mAnimations.duration1}
 				>
@@ -50,7 +50,7 @@ export function Location() {
 				<m.button
 					className='button'
 					onClick={() => setIsModalOpen(true)}
-					initial={mAnimations.fadeLeft20}
+					initial={mAnimations.opacity}
 					whileInView={mAnimations.inView}
 					transition={mAnimations.duration1}
 				>

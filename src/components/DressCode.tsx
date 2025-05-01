@@ -10,7 +10,7 @@ export function DressCode() {
 				<Title>Дресс-код</Title>
 				<m.p
 					className='max-w-[800px] text-md md:text-lg lg:text-xl'
-					initial={mAnimations.fadeRight50}
+					initial={mAnimations.opacity}
 					whileInView={mAnimations.inView}
 					transition={mAnimations.duration1}
 				>

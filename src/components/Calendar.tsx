@@ -21,7 +21,7 @@ export function Calendar() {
 				<Title>Июль</Title>
 				<m.div
 					className='relative'
-					initial={mAnimations.fadeRight50}
+					initial={mAnimations.opacity}
 					whileInView={mAnimations.inView}
 					transition={mAnimations.duration1}
 				>
