@@ -1,5 +1,7 @@
 'use client'
 
+import { mAnimations } from '@/config/motion.config'
+import * as m from 'motion/react-m'
 import { twMerge } from 'tailwind-merge'
 import { AlcoholTypes, Presence } from './guest-form.data'
 
@@ -36,7 +38,12 @@ export function GuestForm({
 	}
 
 	return (
-		<div className='flex flex-col text-left gap-6 border p-4 rounded-lg'>
+		<m.div
+			className='flex flex-col text-left gap-6 border p-4 rounded-lg'
+			initial={mAnimations.fadeRight50}
+			whileInView={mAnimations.inView}
+			transition={mAnimations.duration1}
+		>
 			<p className='font-bold text-xl'>Гость {id + 1}</p>
 			<div className='question-block'>
 				<label className='question-title'>Фамилия и Имя</label>
@@ -106,6 +113,6 @@ export function GuestForm({
 					Удалить
 				</button>
 			</div>
-		</div>
+		</m.div>
 	)
 }

@@ -1,3 +1,5 @@
+import { mAnimations } from '@/config/motion.config'
+import * as m from 'motion/react-m'
 import Image from 'next/image'
 import { Container } from '../ui/container/Container'
 import { Title } from '../ui/title/Title'
@@ -9,9 +11,14 @@ export function Schedule() {
 		<Container>
 			<div className='flex flex-col items-center gap-6'>
 				<Title>Программа дня</Title>
-				<p className='text-center text-green-900 text-xl md:text-2xl lg:text-3xl'>
+				<m.p
+					className='text-center text-green-900 text-xl md:text-2xl lg:text-3xl'
+					initial={mAnimations.fadeBottom20}
+					whileInView={mAnimations.inView}
+					transition={mAnimations.duration05}
+				>
 					Суббота 19 июля 2025
-				</p>
+				</m.p>
 				<div className='flex flex-col items-center justify-center relative gap-6 md:gap-8 lg:gap-16'>
 					{scheduleData.map((data, index) => (
 						<ScheduleItem

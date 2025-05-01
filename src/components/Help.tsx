@@ -1,10 +1,17 @@
+import { mAnimations } from '@/config/motion.config'
+import * as m from 'motion/react-m'
 import Image from 'next/image'
 import { Container } from './ui/container/Container'
 
 export function Help() {
 	return (
 		<Container>
-			<div className='flex flex-col items-center gap-2'>
+			<m.div
+				className='flex flex-col items-center gap-2'
+				initial={mAnimations.fadeLeft50}
+				whileInView={mAnimations.inView}
+				transition={mAnimations.duration1}
+			>
 				<p className='text-xl'>
 					По всем интересующим вас
 					<br />
@@ -37,7 +44,7 @@ export function Help() {
 						+7 (953) 124-51-86
 					</a>
 				</div>
-			</div>
+			</m.div>
 		</Container>
 	)
 }

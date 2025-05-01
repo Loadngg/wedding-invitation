@@ -6,6 +6,8 @@ import { GuestQuest } from '@/components/guest-quest/GuestQuest'
 import { Help } from '@/components/Help'
 import { Intro } from '@/components/Intro'
 import { Schedule } from '@/components/schedule/Schedule'
+import { mAnimations } from '@/config/motion.config'
+import * as m from 'motion/react-m'
 import Image from 'next/image'
 import { Location } from '../components/location/Location'
 
@@ -20,7 +22,12 @@ export default function Home() {
 			<DressCode />
 			<GuestQuest />
 			<Help />
-			<div className='relative flex items-center justify-center w-full h-[100px] md:h-[125px] lg:h-[150px]'>
+			<m.div
+				className='relative flex items-center justify-center w-full h-[100px] md:h-[125px] lg:h-[150px]'
+				initial={mAnimations.opacity}
+				whileInView={mAnimations.inView}
+				transition={mAnimations.duration05}
+			>
 				<Image
 					src='/rings.png'
 					alt='Кольца'
@@ -28,7 +35,7 @@ export default function Home() {
 					loading='lazy'
 					className='object-contain'
 				/>
-			</div>
+			</m.div>
 			<Footer />
 		</div>
 	)

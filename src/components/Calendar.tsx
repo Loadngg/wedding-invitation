@@ -1,3 +1,5 @@
+import { mAnimations } from '@/config/motion.config'
+import * as m from 'motion/react-m'
 import Image from 'next/image'
 import { Container } from './ui/container/Container'
 import { Title } from './ui/title/Title'
@@ -17,7 +19,12 @@ export function Calendar() {
 		<Container>
 			<div className='flex flex-col items-center gap-6 w-fit p-8 -mt-8 mx-auto'>
 				<Title>Июль</Title>
-				<div className='relative'>
+				<m.div
+					className='relative'
+					initial={mAnimations.fadeRight50}
+					whileInView={mAnimations.inView}
+					transition={mAnimations.duration1}
+				>
 					<div className='absolute top-3 -left-16 w-[250px] h-[200px] md:w-[350px] md:h-[300px] md:-top-3 md:-left-24 lg:w-[425px] lg:h-[375px] lg:-top-6 lg:-left-20'>
 						<Image
 							src='/angel.png'
@@ -62,7 +69,7 @@ export function Calendar() {
 							))}
 						</tbody>
 					</table>
-				</div>
+				</m.div>
 			</div>
 		</Container>
 	)

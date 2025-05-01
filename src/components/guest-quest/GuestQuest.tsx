@@ -1,8 +1,10 @@
 'use client'
 
+import { mAnimations } from '@/config/motion.config'
 import { answerService } from '@/services/answer.service'
 import { IAnswer, IAnswerFormData } from '@/types/answer.type'
 import { useMutation } from '@tanstack/react-query'
+import * as m from 'motion/react-m'
 import Image from 'next/image'
 import { useEffect, useRef, useState } from 'react'
 import { twMerge } from 'tailwind-merge'
@@ -154,28 +156,34 @@ export function GuestQuest() {
 						/>
 					))}
 				</div>
-				<button
+				<m.button
 					onClick={addForm}
 					className={twMerge(
 						'button',
 						isSubmitted ? 'opacity-50 pointer-events-none' : ''
 					)}
+					initial={mAnimations.fadeLeft20}
+					whileInView={mAnimations.inView}
+					transition={mAnimations.duration1}
 				>
 					Добавить гостя
-				</button>
-				<button
+				</m.button>
+				<m.button
 					onClick={handleSubmitAll}
 					className={twMerge(
 						'button',
 						(isSubmitted || isLoading) && 'opacity-50 pointer-events-none'
 					)}
+					initial={mAnimations.fadeRight20}
+					whileInView={mAnimations.inView}
+					transition={mAnimations.duration1}
 				>
 					{isSubmitted
 						? 'Отправлено'
 						: isLoading
 						? 'Отправка...'
 						: 'Отправить анкеты'}
-				</button>
+				</m.button>
 			</div>
 		</Container>
 	)

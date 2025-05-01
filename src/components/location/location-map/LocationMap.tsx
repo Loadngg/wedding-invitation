@@ -1,12 +1,18 @@
+import { mAnimations } from '@/config/motion.config'
+import * as m from 'motion/react-m'
+
 interface Props {
 	onClose: () => void
 }
 
 export function LocationMap({ onClose }: Props) {
 	return (
-		<div
+		<m.div
 			className='fixed inset-0 bg-black/50 flex items-center justify-center p-4 z-40'
 			onClick={onClose}
+			initial={mAnimations.opacity}
+			whileInView={mAnimations.inView}
+			transition={mAnimations.duration05}
 		>
 			<div
 				className='bg-white rounded-lg shadow-xl relative w-full max-w-full lg:max-w-4xl h-[600px]'
@@ -47,6 +53,6 @@ export function LocationMap({ onClose }: Props) {
 					</div>
 				</div>
 			</div>
-		</div>
+		</m.div>
 	)
 }
