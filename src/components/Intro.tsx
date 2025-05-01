@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 export function Intro() {
 	return (
-		<div className='h-[85vh] relative'>
+		<div className='h-[85vh] relative flex flex-col items-center justify-center'>
 			<Image
 				src='/intro.jpg'
 				alt='intro'
@@ -12,7 +12,7 @@ export function Intro() {
 				priority
 				className='object-cover -z-10 brightness-50 w-auto h-auto'
 			/>
-			<div className='h-full flex flex-col items-center justify-center text-center text-pink-300 gap-40 lg:gap-56'>
+			<div className='h-full max-h-[650px] flex flex-col items-center justify-between text-center text-pink-300 p-12'>
 				<h1 className='leading-[0.8] text-7xl md:text-8xl lg:text-9xl'>
 					<m.p
 						initial={mAnimations.fadeLeft50}
