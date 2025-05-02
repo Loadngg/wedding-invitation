@@ -48,6 +48,11 @@ td {
 	@apply bg-pink-600 text-primary hover:bg-pink-300;
 }
 
+.button.button--disabled {
+	opacity: 50% !important;
+	pointer-events: none !important;
+}
+
 .timer-block {
 	@apply flex flex-col items-center justify-center min-w-[100px];
 }

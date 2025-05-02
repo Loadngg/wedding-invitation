@@ -158,25 +158,23 @@ export function GuestQuest() {
 				</div>
 				<m.button
 					onClick={addForm}
-					className={twMerge(
-						'button',
-						isSubmitted ? 'opacity-50 pointer-events-none' : ''
-					)}
 					initial={mAnimations.fadeLeft20}
 					whileInView={mAnimations.inView}
 					transition={mAnimations.duration1}
+					className={twMerge('button', isSubmitted ? 'button--disabled' : '')}
 				>
 					Добавить гостя
 				</m.button>
 				<m.button
 					onClick={handleSubmitAll}
-					className={twMerge(
-						'button',
-						(isSubmitted || isLoading) && 'opacity-50 pointer-events-none'
-					)}
 					initial={mAnimations.fadeRight20}
 					whileInView={mAnimations.inView}
 					transition={mAnimations.duration1}
+					className={twMerge(
+						'button',
+						isSubmitted && 'button--disabled',
+						isLoading && 'button--disabled'
+					)}
 				>
 					{isSubmitted
 						? 'Отправлено'

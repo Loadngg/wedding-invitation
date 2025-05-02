@@ -107,7 +107,7 @@ export function GuestForm({
 					onClick={() => closeForm(id)}
 					className={twMerge(
 						'button button--warning',
-						isSubmitted ? 'opacity-50 pointer-events-none' : ''
+						isSubmitted ? 'button--disabled' : ''
 					)}
 				>
 					Удалить
