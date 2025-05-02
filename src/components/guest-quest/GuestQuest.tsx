@@ -161,7 +161,10 @@ export function GuestQuest() {
 					initial={mAnimations.fadeLeft20}
 					whileInView={mAnimations.inView}
 					transition={mAnimations.duration1}
-					className={twMerge('button', isSubmitted ? 'button--disabled' : '')}
+					className={twMerge(
+						'button',
+						(isSubmitted || isLoading) && 'button--disabled'
+					)}
 				>
 					Добавить гостя
 				</m.button>
@@ -172,8 +175,7 @@ export function GuestQuest() {
 					transition={mAnimations.duration1}
 					className={twMerge(
 						'button',
-						isSubmitted && 'button--disabled',
-						isLoading && 'button--disabled'
+						(isSubmitted || isLoading) && 'button--disabled'
 					)}
 				>
 					{isSubmitted
